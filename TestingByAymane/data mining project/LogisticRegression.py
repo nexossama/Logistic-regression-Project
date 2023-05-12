@@ -31,8 +31,7 @@ class myLogisticRegression:
 
             # Step5
             self.theta[1:] = self.theta[1:] - self.l_rate * d_theta1  # upadting values of thetas using Gradient descent
-            self.theta[0] = self.theta[
-                                0] - self.l_rate * d_theta0  # upadting the value of theta 0 using Gradient descent
+            self.theta[0] = self.theta[0] - self.l_rate * d_theta0  # upadting the value of theta 0 using Gradient descent
         return self
 
     def predict(self, x):  # Predicts the value after the model has been trained.
@@ -40,7 +39,6 @@ class myLogisticRegression:
         z = y_pred
         g_z = 1 / (1 + np.e ** (-z))
         return [1 if i > 0.5 else 0 for i in g_z]  # Threshold
-
 
 
 

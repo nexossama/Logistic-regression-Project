@@ -1,7 +1,10 @@
+import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.decomposition import PCA
 from LogisticRegression import myLogisticRegression,accuracy
+from helpers import ConvertData,ConvertClass
+
 
 data = pd.read_csv('student-mat.csv',sep=';')
 X = data[['school', 'sex', 'age', 'address', 'famsize', 'Pstatus', 'Medu', 'Fedu',
@@ -60,21 +63,42 @@ for i, col in enumerate(X_std.columns):
 
 print("===================================")
 
-
+#========================================== Accuracy =============================
 # la reduction de dimension
 
 X = X_std[['school','sex','age','address','famsize','Pstatus','Medu','Fedu','Mjob','Fjob']].values
 
 #Spliting the data
-X_train, X_test, Y_train, Y_test = train_test_split(X_std, y, test_size=0.2, random_state=3)
+X_train, X_test, Y_train, Y_test = train_test_split(X, y, test_size=0.2, random_state=3)
+
+
 
 # l'application de la regression logistique
 model = myLogisticRegression()
-model.fit(X_train, Y_train)
+print(model.fit(X_train, Y_train))
 
 
 # calcul de la precision
 y_pred = model.predict(X_test)
 acc = accuracy(y_pred,Y_test)
 print("la precision est :",acc*100)
+
+
+print("===================================")
+
+#========================================== Prediction =============================
+liste1=['Gabriel Pereira','Female',18,'urban',7,'living together','higher education','5th to 9th grade','health : care related','services (e.g. administrative or police)']
+
+xx = ConvertData(liste1)
+print(xx)
+data_converted =  (xx - np.mean(xx)) / np.std(xx)
+final_Data = np.array(data_converted)
+final = final_Data.reshape((1, 10))
+print(final)
+
+#prediction de la classe des donnees
+class_pred = model.predict(final)
+
+print("the class is ",class_pred[0])
+print("the result is  : ",ConvertClass(class_pred[0]))
 
