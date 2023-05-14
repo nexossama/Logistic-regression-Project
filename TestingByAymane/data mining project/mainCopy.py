@@ -4,8 +4,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.decomposition import PCA
 from LogisticRegression import myLogisticRegression,accuracy
 from helpers import ConvertData,ConvertClass
+from sklearn.linear_model import LogisticRegression
 
-
+l=LogisticRegression()
 data = pd.read_csv('../../student-mat.csv', sep=';')
 X = data[['school', 'sex', 'age', 'address', 'famsize', 'Pstatus', 'Medu', 'Fedu',
        'Mjob', 'Fjob', 'reason', 'guardian', 'traveltime', 'studytime',
@@ -75,11 +76,11 @@ X_train, X_test, Y_train, Y_test = train_test_split(X, y, test_size=0.2, random_
 
 # l'application de la regression logistique
 model = myLogisticRegression()
-print(model.fit(X_train, Y_train))
+print(l.fit(X_train, Y_train))
 
 
 # calcul de la precision
-y_pred = model.predict(X_test)
+y_pred = l.predict(X_test)
 acc = accuracy(y_pred,Y_test)
 print("la precision est :",acc*100)
 
@@ -97,8 +98,19 @@ final = final_Data.reshape((1, 10))
 print(final)
 
 #prediction de la classe des donnees
-class_pred = model.predict(final)
+class_pred = l.predict(final)
 
 print("the class is ",class_pred[0])
 print("the result is  : ",ConvertClass(class_pred[0]))
+
+for i in df47.:
+    #     l=[df47.iloc[i, 0], df47.iloc[i, 2], df47.iloc[i, 3], df47.iloc[i, 4], df47.iloc[i, 5], df47.iloc[i, 6], df47.iloc[i, 7], df47.iloc[i, 8], df47.iloc[i, 9], df47.iloc[i, 10]]
+    #     print(df[i][:10].tolist())
+    row = np.delete(i, list(range(10, 30)))
+    #     print([row.tolist()])
+    class_pred = loaded_model.predict([row.tolist()])
+    s = l.predict
+
+    print(class_pred)
+
 
