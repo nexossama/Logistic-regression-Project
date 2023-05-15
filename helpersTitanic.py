@@ -45,7 +45,7 @@ def ConvertClass(x):
     if x==[0] :
         return "Survived"
     if x==[1]:
-        return "Did not Survived"
+        return "Did not Survive"
 
 
 
