@@ -4,7 +4,10 @@ import numpy as np
 from LogisticRegression import myLogisticRegression
 from helpersTitanic import ConvertData,ConvertClass
 st.header("Titanic survivor prediction :ocean: :ship:")
+
+
 form1=st.form("form1")
+
 loaded_model = pickle.load(open('titanic_survivor_v2.sav', 'rb'))
 
 def predict(form):
@@ -31,5 +34,20 @@ with form1:
     if button:
         predict(form1)
 
+st.markdown("### Ressources")
+
+# report=st.markdown("###### You can check the kaggle notebook for further details(dataset ,model implementation ...) ")
+st.markdown("You can check the kaggle notebook for further details(dataset ,model implementation ...) : <a href='http://example.com/' style='color:#FF4B4B;'>Kaggle link</a>",unsafe_allow_html=True)
+st.markdown("or download project ressources : ",unsafe_allow_html=True)
+
+l=st.columns(4)
+with open("Rapport_LogisticReression.pdf", "rb") as f:
+    l[0].download_button("Project report", data=f, file_name="Logistic_Regression_Report.pdf")
+
+with open("Logistic-Regression.pptx", "rb") as f:
+    l[1].download_button("Project presentation", data=f, file_name="Logistic-Regression_presentation.pptx")
+
+st.markdown("### Authors")
+st.markdown("- ##### Elgharbaoui Abdelghafor \n- ##### Maghouti Aymane \n- ##### Outmani Ossama")
 
 
