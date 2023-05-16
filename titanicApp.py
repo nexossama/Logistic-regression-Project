@@ -37,7 +37,7 @@ with form1:
 st.markdown("### Ressources")
 
 # report=st.markdown("###### You can check the kaggle notebook for further details(dataset ,model implementation ...) ")
-st.markdown("You can check the kaggle notebook for further details(dataset ,model implementation ...) : <a href='http://example.com/' style='color:#FF4B4B;'>Kaggle link</a>",unsafe_allow_html=True)
+st.markdown("You can check the kaggle notebook for further details(dataset ,model implementation ...) : <a href='https://www.kaggle.com/ossamaoutmani/titanic-competition' style='color:#FF4B4B;'>Kaggle link</a>",unsafe_allow_html=True)
 st.markdown("or download project ressources : ",unsafe_allow_html=True)
 
 l=st.columns(4)
