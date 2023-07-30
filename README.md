@@ -68,4 +68,5 @@ Feel free to customize the content and functionality of this application accordi
 ---
 # Authors
 <a href="https://www.linkedin.com/in/aymane-maghouti/" target="_blank">Aymane Maghouti</a><br>
-<a href="https://www.linkedin.com/in/ossama-outmani/" target="_blank">Ossama Outmani</a>
+<a href="https://www.linkedin.com/in/ossama-outmani/" target="_blank">Ossama Outmani</a><br>
+<a href="#" target="_blank">Elgharbaoui Abdelghafor</a>
