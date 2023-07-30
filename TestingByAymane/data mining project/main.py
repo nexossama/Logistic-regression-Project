@@ -6,7 +6,7 @@ from LogisticRegression import myLogisticRegression,accuracy
 from helpers import ConvertData,ConvertClass
 
 
-data = pd.read_csv('../../student-mat.csv', sep=';')
+data = pd.read_csv('student-mat.csv', sep=';')
 X = data[['school', 'sex', 'age', 'address', 'famsize', 'Pstatus', 'Medu', 'Fedu',
        'Mjob', 'Fjob', 'reason', 'guardian', 'traveltime', 'studytime',
        'failures', 'schoolsup', 'famsup', 'paid', 'activities', 'nursery',

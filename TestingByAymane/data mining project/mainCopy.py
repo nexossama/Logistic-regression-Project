@@ -7,7 +7,7 @@ from helpers import ConvertData,ConvertClass
 from sklearn.linear_model import LogisticRegression
 
 l=LogisticRegression()
-data = pd.read_csv('../../student-mat.csv', sep=';')
+data = pd.read_csv('student-mat.csv', sep=';')
 X = data[['school', 'sex', 'age', 'address', 'famsize', 'Pstatus', 'Medu', 'Fedu',
        'Mjob', 'Fjob', 'reason', 'guardian', 'traveltime', 'studytime',
        'failures', 'schoolsup', 'famsup', 'paid', 'activities', 'nursery',
