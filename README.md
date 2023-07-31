@@ -53,7 +53,7 @@ We demonstrate how to utilize the deployed logistic regression model using Strea
 ![Texte alternatif de l'image](image/prediction.png) 
 ---
 
-So to make predictions, consult the following link <a href="https://bit.ly/Titanic_survival">Click here</a>  then provide the data and finally see the result, or watch the demo video which is shared in `linkedin` platform, here is the link <a href="">Click here</a>
+So to make predictions, consult the following link <a href="https://bit.ly/Titanic_survival">Click here</a>  then provide the data and finally see the result, or watch the demo video which is shared in `linkedin` platform, here is the link <a href="https://www.linkedin.com/posts/ossama-outmani_machinelearning-kagglecompetition-logisticregression-activity-7091796106392600576-Bl6l?utm_source=share&utm_medium=member_desktop">Click here</a>
 
 ---
 
